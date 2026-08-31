@@ -32,28 +32,7 @@ export const PROFILE = [
   },
 ] as const;
 
-export const SERVICES = [
-  {
-    title: "Instagram Account Management",
-    description:
-      "Full day-to-day ownership of your account — posting, scheduling, community management and inbox, so you can focus on your craft.",
-  },
-  {
-    title: "Content Strategy & Creation",
-    description:
-      "Reels, carousels and stories built around a content plan that fits your niche and actually gets watched.",
-  },
-  {
-    title: "Growth & Engagement",
-    description:
-      "Audience growth that compounds: hashtag and hook research, posting cadence, and engagement routines that reach real people.",
-  },
-  {
-    title: "Brand Positioning",
-    description:
-      "Bio, highlights, grid aesthetic and tone of voice aligned so a first-time visitor knows exactly who you are in five seconds.",
-  },
-] as const;
+export const SERVICES = ["Video Editing"] as const;
 
 export const NICHES = ["Fitness", "Health", "Wellness", "Food", "Retail"] as const;
 

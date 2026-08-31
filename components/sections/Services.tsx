@@ -15,7 +15,7 @@ export default function Services() {
 
       <div className="relative mx-auto max-w-7xl">
         <Reveal>
-          <header className="mb-16 md:mb-20">
+          <header className="mb-12 text-center md:mb-16">
             <p className="mb-3 text-xs font-semibold tracking-[0.25em] text-blue-400 uppercase">
               Services
             </p>
@@ -25,35 +25,30 @@ export default function Services() {
             >
               What I Do
             </h2>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
-              End-to-end Instagram partnership — from the content plan to the comments
-              section.
-            </p>
           </header>
         </Reveal>
 
-        <ol className="grid gap-6 sm:grid-cols-2">
+        <ul className="mx-auto grid max-w-2xl gap-6">
           {SERVICES.map((service, index) => (
-            <li key={service.title}>
-              <Reveal delay={index * 80} className="h-full">
-                <article className="card-hover group relative flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-8">
-                  <p
-                    className="stat-number mb-6 font-[family-name:var(--font-syne)] text-sm font-bold text-zinc-700 transition-colors duration-300 group-hover:text-blue-500/60"
+            <li key={service}>
+              <Reveal delay={index * 80}>
+                <article className="card-hover group relative overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-10 text-center sm:p-12">
+                  <div
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                     aria-hidden="true"
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="font-[family-name:var(--font-syne)] text-xl font-semibold leading-snug text-zinc-100 sm:text-2xl">
-                    {service.title}
+                  />
+                  <h3 className="relative z-10 font-[family-name:var(--font-syne)] text-2xl font-bold tracking-tight text-zinc-50 sm:text-3xl md:text-4xl">
+                    {service}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-zinc-400 sm:text-base">
-                    {service.description}
-                  </p>
+                  <span
+                    className="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-500 group-hover:w-full"
+                    aria-hidden="true"
+                  />
                 </article>
               </Reveal>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     </section>
   );
