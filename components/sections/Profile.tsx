@@ -1,3 +1,4 @@
+import Reveal from "@/components/ui/Reveal";
 import { PROFILE } from "@/lib/constants";
 
 const icons: Record<string, React.ReactNode> = {
@@ -36,6 +37,7 @@ export default function Profile() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/[0.02] to-transparent" aria-hidden="true" />
 
       <div className="relative mx-auto max-w-7xl">
+        <Reveal>
         <header className="mb-16 md:mb-20">
           <p className="mb-3 text-xs font-semibold tracking-[0.25em] text-blue-400 uppercase">
             Profile
@@ -51,12 +53,13 @@ export default function Profile() {
             premium results to clients across the globe.
           </p>
         </header>
+        </Reveal>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {PROFILE.map((item) => (
+          {PROFILE.map((item, index) => (
+            <Reveal key={item.label} delay={index * 90} className="h-full">
             <article
-              key={item.label}
-              className="card-hover group flex flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-8"
+              className="card-hover group flex h-full flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-8"
             >
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl border border-zinc-700/50 bg-zinc-800/50 text-blue-400 transition-colors duration-300 group-hover:border-blue-500/30 group-hover:bg-blue-500/10">
                 {icons[item.label]}
@@ -68,6 +71,7 @@ export default function Profile() {
                 {item.value}
               </p>
             </article>
+            </Reveal>
           ))}
         </div>
       </div>
