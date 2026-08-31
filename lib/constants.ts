@@ -32,7 +32,13 @@ export const PROFILE = [
   },
 ] as const;
 
-export const SERVICES = ["Video Editing"] as const;
+export const SERVICES = [
+  {
+    title: "Video Editing",
+    description:
+      "Short-form video edits for Reels and social — cut, paced and finished for the feed.",
+  },
+] as const;
 
 export const NICHES = ["Fitness", "Health", "Wellness", "Food", "Retail"] as const;
 

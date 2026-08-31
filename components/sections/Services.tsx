@@ -30,7 +30,7 @@ export default function Services() {
 
         <ul className="mx-auto grid max-w-2xl gap-6">
           {SERVICES.map((service, index) => (
-            <li key={service}>
+            <li key={service.title}>
               <Reveal delay={index * 80}>
                 <article className="card-hover group relative overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-900/40 p-10 text-center sm:p-12">
                   <div
@@ -38,8 +38,11 @@ export default function Services() {
                     aria-hidden="true"
                   />
                   <h3 className="relative z-10 font-[family-name:var(--font-syne)] text-2xl font-bold tracking-tight text-zinc-50 sm:text-3xl md:text-4xl">
-                    {service}
+                    {service.title}
                   </h3>
+                  <p className="relative z-10 mx-auto mt-4 max-w-md text-sm leading-relaxed text-zinc-400 sm:text-base">
+                    {service.description}
+                  </p>
                   <span
                     className="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-500 group-hover:w-full"
                     aria-hidden="true"
