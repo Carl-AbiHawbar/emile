@@ -79,7 +79,6 @@ export const CLIENTS: readonly Client[] = [
   client("Tia Abou Rjeily", "tiaabourjeily", "Fitness"),
   client("Dalia Zawil", "daliazawil_dxb", "Fitness"),
   client("Rfitness", "raafat_sharaff", "Fitness"),
-  client("Sally Zalzali", "sallys_station", "Fitness"),
 
   client("Dr. Madlenn", "dr.madlenn_ah", "Health"),
   client("Dr. Jennifer Akl", "drjenniferakl", "Health"),
@@ -87,6 +86,7 @@ export const CLIENTS: readonly Client[] = [
   client("Dr. Hiba Tannous", "dr.hibatannous", "Health"),
   client("Berrylite Health Center", "berrylitehealthcenter", "Health"),
   client("Dr. Hoda Zakaria", "drhodazakaria", "Health"),
+  client("Sally Zalzali", "sallys_station", "Health"),
 
   client("Georgia El Jad", "fitness.by.georgia", "Nutrition"),
   client("Tayeb Misbah", "tayibm", "Nutrition"),
