@@ -40,7 +40,17 @@ export const SERVICES = [
   },
 ] as const;
 
-export const NICHES = ["Fitness", "Health", "Wellness", "Food", "Retail"] as const;
+export const NICHES = [
+  "Fitness",
+  "Health",
+  "Nutrition",
+  "Wellness",
+  "Coaching",
+  "Finance",
+  "Food",
+  "Dance",
+  "Retail",
+] as const;
 
 export type Niche = (typeof NICHES)[number];
 
@@ -48,181 +58,54 @@ export type Client = {
   name: string;
   handle: string;
   url: string;
-  niche?: Niche;
+  niche: Niche;
 };
 
+const client = (name: string, handle: string, niche: Niche): Client => ({
+  name,
+  handle,
+  url: `https://www.instagram.com/${handle}`,
+  niche,
+});
+
 export const CLIENTS: readonly Client[] = [
-  {
-    name: "Michel Maalouf",
-    handle: "michelmaalouf_ifbbpro",
-    url: "https://www.instagram.com/michelmaalouf_ifbbpro",
-    niche: "Fitness",
-  },
-  {
-    name: "Let's Run All",
-    handle: "letsrunall",
-    url: "https://www.instagram.com/letsrunall",
-    niche: "Fitness",
-  },
-  {
-    name: "Muscle Madness Leb",
-    handle: "musclemadnessleb",
-    url: "https://www.instagram.com/musclemadnessleb",
-    niche: "Fitness",
-  },
-  {
-    name: "Fitness by Georgia",
-    handle: "fitness.by.georgia",
-    url: "https://www.instagram.com/fitness.by.georgia",
-    niche: "Fitness",
-  },
-  {
-    name: "Precision Training LB",
-    handle: "precision.training.lb",
-    url: "https://www.instagram.com/precision.training.lb",
-    niche: "Fitness",
-  },
-  {
-    name: "The Moms Trainer",
-    handle: "themomstrainer",
-    url: "https://www.instagram.com/themomstrainer",
-    niche: "Fitness",
-  },
-  {
-    name: "Dr. Madlenn",
-    handle: "dr.madlenn_ah",
-    url: "https://www.instagram.com/dr.madlenn_ah",
-    niche: "Health",
-  },
-  {
-    name: "Dr. Jennifer Akl",
-    handle: "drjenniferakl",
-    url: "https://www.instagram.com/drjenniferakl",
-    niche: "Health",
-  },
-  {
-    name: "Dr. Sandra Abi Akl",
-    handle: "dr.sandraabiakl",
-    url: "https://www.instagram.com/dr.sandraabiakl",
-    niche: "Health",
-  },
-  {
-    name: "Dr. Hiba Tannous",
-    handle: "dr.hibatannous",
-    url: "https://www.instagram.com/dr.hibatannous",
-    niche: "Health",
-  },
-  {
-    name: "Berrylite Health Center",
-    handle: "berrylitehealthcenter",
-    url: "https://www.instagram.com/berrylitehealthcenter",
-    niche: "Health",
-  },
-  {
-    name: "MindCare by Steph",
-    handle: "mindcare_bysteph",
-    url: "https://www.instagram.com/mindcare_bysteph",
-    niche: "Wellness",
-  },
-  {
-    name: "ISTDP Therapist",
-    handle: "istdptherapist",
-    url: "https://www.instagram.com/istdptherapist",
-    niche: "Wellness",
-  },
-  {
-    name: "P'tit Chef LB",
-    handle: "ptitcheflb",
-    url: "https://www.instagram.com/ptitcheflb",
-    niche: "Food",
-  },
-  {
-    name: "Jewelry by D",
-    handle: "jewelry_by_d.lb",
-    url: "https://www.instagram.com/jewelry_by_d.lb",
-    niche: "Retail",
-  },
-  // Niche not yet confirmed by Emile — intentionally left untagged.
-  {
-    name: "Raafat Sharaf",
-    handle: "raafat_sharaff",
-    url: "https://www.instagram.com/raafat_sharaff",
-  },
-  {
-    name: "Sally's Station",
-    handle: "sallys_station",
-    url: "https://www.instagram.com/sallys_station",
-  },
-  {
-    name: "Coach Joelle",
-    handle: "coach.joelle",
-    url: "https://www.instagram.com/coach.joelle",
-  },
-  {
-    name: "Dr. Hoda Zakaria",
-    handle: "drhodazakaria",
-    url: "https://www.instagram.com/drhodazakaria",
-    niche: "Health",
-  },
-  // Niche not yet confirmed by Emile — intentionally left untagged.
-  {
-    name: "Sawsan Akil",
-    handle: "sawsan_akil",
-    url: "https://www.instagram.com/sawsan_akil",
-  },
-  {
-    name: "Rich the Signalyst",
-    handle: "richthesignalyst",
-    url: "https://www.instagram.com/richthesignalyst",
-  },
-  {
-    name: "Luciana Habib",
-    handle: "lucianahabibnlp",
-    url: "https://www.instagram.com/lucianahabibnlp",
-  },
-  {
-    name: "Dance N Attitude",
-    handle: "dance_n_attitude",
-    url: "https://www.instagram.com/dance_n_attitude",
-  },
-  {
-    name: "Tayib M",
-    handle: "tayibm",
-    url: "https://www.instagram.com/tayibm",
-  },
-  {
-    name: "Level Up Beirut",
-    handle: "level_up_beirut",
-    url: "https://www.instagram.com/level_up_beirut",
-  },
-  {
-    name: "Nada Assaf Slaibi",
-    handle: "nadaassafslaibi",
-    url: "https://www.instagram.com/nadaassafslaibi",
-  },
-  {
-    name: "Kevork Koumashian",
-    handle: "kevorkkoumashian",
-    url: "https://www.instagram.com/kevorkkoumashian",
-  },
-  {
-    name: "Profond",
-    handle: "profond_official",
-    url: "https://www.instagram.com/profond_official",
-  },
-  {
-    name: "Tia Abou Rjeily",
-    handle: "tiaabourjeily",
-    url: "https://www.instagram.com/tiaabourjeily",
-  },
-  {
-    name: "Laila Hankir",
-    handle: "laila.hankir",
-    url: "https://www.instagram.com/laila.hankir",
-  },
-  {
-    name: "Dalia Zawil",
-    handle: "daliazawil_dxb",
-    url: "https://www.instagram.com/daliazawil_dxb",
-  },
+  client("Michel Maalouf IFBB Pro", "michelmaalouf_ifbbpro", "Fitness"),
+  client("Lets Run All", "letsrunall", "Fitness"),
+  client("Muscle Madness", "musclemadnessleb", "Fitness"),
+  client("Precision Training LB", "precision.training.lb", "Fitness"),
+  client("Rewa Hanna", "themomstrainer", "Fitness"),
+  client("Level Up Beirut", "level_up_beirut", "Fitness"),
+  client("Kevork Koumashian", "kevorkkoumashian", "Fitness"),
+  client("Tia Abou Rjeily", "tiaabourjeily", "Fitness"),
+  client("Dalia Zawil", "daliazawil_dxb", "Fitness"),
+  client("Rfitness", "raafat_sharaff", "Fitness"),
+  client("Sally Zalzali", "sallys_station", "Fitness"),
+
+  client("Dr. Madlenn", "dr.madlenn_ah", "Health"),
+  client("Dr. Jennifer Akl", "drjenniferakl", "Health"),
+  client("Sandra Abi Akl El-Asmar", "dr.sandraabiakl", "Health"),
+  client("Dr. Hiba Tannous", "dr.hibatannous", "Health"),
+  client("Berrylite Health Center", "berrylitehealthcenter", "Health"),
+  client("Dr. Hoda Zakaria", "drhodazakaria", "Health"),
+
+  client("Georgia El Jad", "fitness.by.georgia", "Nutrition"),
+  client("Tayeb Misbah", "tayibm", "Nutrition"),
+  client("Nada Assaf Slaibi", "nadaassafslaibi", "Nutrition"),
+
+  client("Mind Care by Stephanie Juan", "mindcare_bysteph", "Wellness"),
+  client("Tatiana Nassar", "istdptherapist", "Wellness"),
+  client("Joelle Deaibess", "coach.joelle", "Wellness"),
+
+  client("Sawsan Akil", "sawsan_akil", "Coaching"),
+  client("Luciana Habib", "lucianahabibnlp", "Coaching"),
+
+  client("Richard Nasr", "richthesignalyst", "Finance"),
+  client("Laila Hankir", "laila.hankir", "Finance"),
+
+  client("Ptit Chef", "ptitcheflb", "Food"),
+  client("ProFond", "profond_official", "Food"),
+
+  client("Dance N' Attitude", "dance_n_attitude", "Dance"),
+
+  client("Jewelry Police by D", "jewelry_by_d.lb", "Retail"),
 ];

@@ -97,17 +97,13 @@ export default function Work() {
                   />
 
                   <div className="relative z-10 mb-8 flex items-start justify-between gap-3">
-                    {client.niche ? (
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-700/60 bg-zinc-800/50 px-3 py-1 text-[10px] font-semibold tracking-[0.15em] text-zinc-400 uppercase">
-                        <span
-                          className="h-1 w-1 rounded-full bg-blue-400"
-                          aria-hidden="true"
-                        />
-                        {client.niche}
-                      </span>
-                    ) : (
-                      <span aria-hidden="true" />
-                    )}
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-700/60 bg-zinc-800/50 px-3 py-1 text-[10px] font-semibold tracking-[0.15em] text-zinc-400 uppercase">
+                      <span
+                        className="h-1 w-1 rounded-full bg-blue-400"
+                        aria-hidden="true"
+                      />
+                      {client.niche}
+                    </span>
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-zinc-800 text-zinc-600 transition-all duration-300 group-hover:border-blue-500/30 group-hover:bg-blue-500/10 group-hover:text-blue-400">
                       <ArrowIcon />
                     </span>
