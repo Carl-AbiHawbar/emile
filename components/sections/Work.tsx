@@ -134,7 +134,7 @@ export default function Work() {
 
         <Reveal>
           <p className="mt-12 text-center text-sm text-zinc-600">
-            …and 80+ more accounts managed to date.
+            Showing {CLIENTS.length} of 100+ accounts managed to date.
           </p>
         </Reveal>
       </div>

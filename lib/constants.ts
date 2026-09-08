@@ -158,4 +158,71 @@ export const CLIENTS: readonly Client[] = [
     handle: "coach.joelle",
     url: "https://www.instagram.com/coach.joelle",
   },
+  {
+    name: "Dr. Hoda Zakaria",
+    handle: "drhodazakaria",
+    url: "https://www.instagram.com/drhodazakaria",
+    niche: "Health",
+  },
+  // Niche not yet confirmed by Emile — intentionally left untagged.
+  {
+    name: "Sawsan Akil",
+    handle: "sawsan_akil",
+    url: "https://www.instagram.com/sawsan_akil",
+  },
+  {
+    name: "Rich the Signalyst",
+    handle: "richthesignalyst",
+    url: "https://www.instagram.com/richthesignalyst",
+  },
+  {
+    name: "Luciana Habib",
+    handle: "lucianahabibnlp",
+    url: "https://www.instagram.com/lucianahabibnlp",
+  },
+  {
+    name: "Dance N Attitude",
+    handle: "dance_n_attitude",
+    url: "https://www.instagram.com/dance_n_attitude",
+  },
+  {
+    name: "Tayib M",
+    handle: "tayibm",
+    url: "https://www.instagram.com/tayibm",
+  },
+  {
+    name: "Level Up Beirut",
+    handle: "level_up_beirut",
+    url: "https://www.instagram.com/level_up_beirut",
+  },
+  {
+    name: "Nada Assaf Slaibi",
+    handle: "nadaassafslaibi",
+    url: "https://www.instagram.com/nadaassafslaibi",
+  },
+  {
+    name: "Kevork Koumashian",
+    handle: "kevorkkoumashian",
+    url: "https://www.instagram.com/kevorkkoumashian",
+  },
+  {
+    name: "Profond",
+    handle: "profond_official",
+    url: "https://www.instagram.com/profond_official",
+  },
+  {
+    name: "Tia Abou Rjeily",
+    handle: "tiaabourjeily",
+    url: "https://www.instagram.com/tiaabourjeily",
+  },
+  {
+    name: "Laila Hankir",
+    handle: "laila.hankir",
+    url: "https://www.instagram.com/laila.hankir",
+  },
+  {
+    name: "Dalia Zawil",
+    handle: "daliazawil_dxb",
+    url: "https://www.instagram.com/daliazawil_dxb",
+  },
 ];
